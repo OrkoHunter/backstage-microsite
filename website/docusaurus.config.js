@@ -20,10 +20,18 @@ const siteConfig = {
     navbar: {
       title: 'Backstage',
       tagline: "An open platform for building developer portals",
+      target: '_self',
+      links: [
+        { to: "https://github.com/spotify/backstage", label: "GitHub" },
+        { to: "blog", blog: true, label: "Blog" },
+        { to: "demos", label: "Demos" },
+        { to: "background", label: "The Spotify story" },
+        { to: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo" },
+      ],
     }
   },
+
   url: "https://backstage.io", // Your website URL
-  cname: "backstage.io",
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -40,14 +48,6 @@ const siteConfig = {
   // Google Analytics
   gaTrackingId: "UA-48912878-10",
 
-  // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [
-    { href: "https://github.com/spotify/backstage", label: "GitHub" },
-    { page: "blog", blog: true, label: "Blog" },
-    { page: "demos", label: "Demos" },
-    { page: "background", label: "The Spotify story" },
-    { href: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo" },
-  ],
 
   /* path to images for header/footer */
   // headerIcon: "img/android-chrome-192x192.png",
