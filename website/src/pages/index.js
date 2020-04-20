@@ -7,13 +7,12 @@
 
 
 import React from 'react';
-import {Block, ActionBlock, Breakpoint} from '../core/Components';
+import { Block, ActionBlock, Breakpoint } from '../core/Components';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 class Index extends React.Component {
   render() {
-    const { config: siteConfig } = this.props;
-    const { baseUrl } = siteConfig;
-
     return (
       <main className="MainContent">
         <Block small className="stripe-bottom bg-black-grey">
@@ -24,8 +23,8 @@ class Index extends React.Component {
               <Block.LinkButton href={"https://github.com/spotify/backstage"}>Go to GitHub</Block.LinkButton>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-12.5} y={16} width={120} src={`${baseUrl}img/laptop.svg`}/>
-              <Block.Graphic x={5.8} y={20} width={88} src={`${baseUrl}img/screen.gif`}/>
+              <Block.Graphic x={-12.5} y={16} width={120} src={useBaseUrl('img/laptop.svg')}/>
+              <Block.Graphic x={5.8} y={20} width={88} src={useBaseUrl('img/screen.gif')}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -38,11 +37,11 @@ class Index extends React.Component {
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
               <Breakpoint
-                wide={<Block.Graphic x={-28} y={5} width={260} src={`${baseUrl}img/logos-background.svg`}/>}
+                wide={<Block.Graphic x={-28} y={5} width={260} src={useBaseUrl('img/logos-background.svg')}/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
-              <Block.Graphic x={20} y={10} width={60} src={`${baseUrl}img/logos.svg`}/>
-              <Breakpoint narrow={<Block.Graphic x={0} y={85} width={100} src={`${baseUrl}img/logos-signature.svg`}/>}/>
+              <Block.Graphic x={20} y={10} width={60} src={useBaseUrl('img/logos.svg')}/>
+              <Breakpoint narrow={<Block.Graphic x={0} y={85} width={100} src={useBaseUrl('img/logos-signature.svg')}/>}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -51,7 +50,7 @@ class Index extends React.Component {
           <ActionBlock.Title>
             See for yourself
           </ActionBlock.Title>
-          <ActionBlock.Link href={`${baseUrl}demos`}>
+          <ActionBlock.Link href={useBaseUrl('demos')}>
             Demos
           </ActionBlock.Link>
         </ActionBlock>
@@ -65,8 +64,8 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.TextBox>
             <Block.Graphics>
               <Breakpoint
-                wide={<Block.Graphic x={-20} y={-5} width={140} src={`${baseUrl}img/plugin.svg`}/>}
-                narrow={<Block.Graphic x={-23.5} y={-5} width={135} src={`${baseUrl}img/plugin-mobile.svg`}/>}
+                wide={<Block.Graphic x={-20} y={-5} width={140} src={useBaseUrl('img/plugin.svg')}/>}
+                narrow={<Block.Graphic x={-23.5} y={-5} width={135} src={useBaseUrl('img/plugin-mobile.svg')}/>}
               />
             </Block.Graphics>
           </Block.Container>
@@ -79,7 +78,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>Why shouldn’t developer tools provide a first-class user experience? After all, engineers are people, too. Backstage is elegantly designed to make a diverse ecosystem of plugins, components, and frameworks easier to access and easier to use. How? By doing what other developer portals forget to consider: the developer on the other end of the portal.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-5} y={-5} width={120} src={`${baseUrl}img/developers.svg`}/>
+              <Block.Graphic x={-5} y={-5} width={120} src={useBaseUrl('img/developers.svg')}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -88,7 +87,7 @@ in one place, your engineers will always know where to find the right tool for t
           <ActionBlock.Title>
             Read why we built it
           </ActionBlock.Title>
-          <ActionBlock.Link href={`${baseUrl}background`}>
+          <ActionBlock.Link href={useBaseUrl('background')}>
             Our Story
           </ActionBlock.Link>
         </ActionBlock>
@@ -100,7 +99,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>As a fully extensible platform, Backstage enables infrastructure teams to integrate new ideas from wherever they come from — whether that’s the open source community at large or the people who understand your infrastructure pain points the best: your own engineers. This extensibility is one reason why Backstage wasn’t just adopted, but embraced by Spotify’s own engineers.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-20} y={-10} width={140} src={`${baseUrl}img/open-platform.svg`}/>
+              <Block.Graphic x={-20} y={-10} width={140} src={useBaseUrl('img/open-platform.svg')}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -113,8 +112,8 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.TextBox>
             <Block.Graphics>
               <Breakpoint
-                wide={<Block.Graphic x={-33} y={-15} width={150} src={`${baseUrl}img/compliance.svg`}/>}
-                narrow={<Block.Graphic x={-25} y={-40} width={150} src={`${baseUrl}img/compliance.svg`}/>}
+                wide={<Block.Graphic x={-33} y={-15} width={150} src={useBaseUrl('img/compliance.svg')}/>}
+                narrow={<Block.Graphic x={-25} y={-40} width={150} src={useBaseUrl('img/compliance.svg')}/>}
               />
             </Block.Graphics>
           </Block.Container>

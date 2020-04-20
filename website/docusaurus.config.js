@@ -15,10 +15,6 @@ const siteConfig = {
   // Used for publishing and more
   projectName: "backstage",
   organizationName: "Spotify",
-  // fossWebsite: "https://spotify.github.io/",
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
 
   presets: [
     [
@@ -75,8 +71,6 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  // repoUrl: "https://github.com/spotify/backstage",
-  // twitterUsername: "SpotifyEng",
 
   stylesheets: [
     "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700&display=swap"
