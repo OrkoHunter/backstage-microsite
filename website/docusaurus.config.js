@@ -28,6 +28,9 @@ const siteConfig = {
         { to: "background", label: "The Spotify story" },
         { to: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo" },
       ],
+    },
+    googleAnalytics: {
+      trackingID: "UA-48912878-10",
     }
   },
 
@@ -44,9 +47,6 @@ const siteConfig = {
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-
-  // Google Analytics
-  gaTrackingId: "UA-48912878-10",
 
 
   /* path to images for header/footer */
