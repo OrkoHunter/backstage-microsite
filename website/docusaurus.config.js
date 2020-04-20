@@ -16,25 +16,16 @@ const siteConfig = {
   projectName: "backstage",
   organizationName: "Spotify",
 
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        theme: {
-          customCss: require.resolve('./static/css/custom.css'),
-        },
-      },
-    ],
-  ],
   themeConfig: {
     navbar: {
-      target: '_self',
+      title: 'Backstage',
+      // target: '_self',
       links: [
-        { to: "https://github.com/spotify/backstage", label: "GitHub" },
-        { to: "blog", blog: true, label: "Blog" },
-        { to: "demos", label: "Demos" },
-        { to: "background", label: "The Spotify story" },
-        { to: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo" },
+        { to: "https://github.com/spotify/backstage", label: "GitHub", position: "right" },
+        { to: "blog", blog: true, label: "Blog", position: "right" },
+        { to: "demos", label: "Demos", position: "right" },
+        { to: "background", label: "The Spotify story", position: "right" },
+        { to: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo", position: "right" },
       ],
     },
     footer: {
@@ -49,6 +40,24 @@ const siteConfig = {
       trackingID: "UA-48912878-10",
     }
   },
+
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          path: 'docs',
+          editUrl: 'https://github.com/spotify/backstage-microsite',
+        },
+        pages: {
+          path: 'src/pages',
+        },
+        theme: {
+          customCss: require.resolve('./static/css/custom.css'),
+        },
+      },
+    ],
+  ],
 
 
   /* path to images for header/footer */
