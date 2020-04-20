@@ -6,8 +6,22 @@
  */
 
 const siteConfig = {
-  title: "Backstage", // Title for your website.
-  tagline: "An open platform for building developer portals",
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        theme: {
+          customCss: require.resolve('./static/css/custom.css'),
+        },
+      },
+    ],
+  ],
+  themeConfig: {
+    navbar: {
+      title: 'Backstage',
+      tagline: "An open platform for building developer portals",
+    }
+  },
   url: "https://backstage.io", // Your website URL
   cname: "backstage.io",
   baseUrl: "/", // Base URL for your project */
@@ -65,15 +79,6 @@ const siteConfig = {
   ogImage: "img/logo-black-248x250.png",
   twitterImage: "img/logo-black-248x250.png",
 
-  // For sites with a sizable amount of content, set collapsible to true.
-  // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
-
-  // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
-
-  // Show documentation's last update time.
-  // enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
