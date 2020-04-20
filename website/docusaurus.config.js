@@ -6,6 +6,20 @@
  */
 
 const siteConfig = {
+  title: 'Backstage',
+  tagline: "An open platform for building developer portals",
+
+  url: "https://backstage.io", // Your website URL
+  baseUrl: "/", // Base URL for your project */
+
+  // Used for publishing and more
+  projectName: "backstage",
+  organizationName: "Spotify",
+  // fossWebsite: "https://spotify.github.io/",
+  // For top-level user or org sites, the organization is still the same.
+  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
+  //   organizationName: 'JoelMarcey'
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -18,8 +32,6 @@ const siteConfig = {
   ],
   themeConfig: {
     navbar: {
-      title: 'Backstage',
-      tagline: "An open platform for building developer portals",
       target: '_self',
       links: [
         { to: "https://github.com/spotify/backstage", label: "GitHub" },
@@ -42,17 +54,6 @@ const siteConfig = {
     }
   },
 
-  url: "https://backstage.io", // Your website URL
-  baseUrl: "/", // Base URL for your project */
-
-  // Used for publishing and more
-  projectName: "backstage",
-  organizationName: "Spotify",
-  fossWebsite: "https://spotify.github.io/",
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
-
 
   /* path to images for header/footer */
   // headerIcon: "img/android-chrome-192x192.png",
@@ -74,8 +75,8 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: "https://github.com/spotify/backstage",
-  twitterUsername: "SpotifyEng",
+  // repoUrl: "https://github.com/spotify/backstage",
+  // twitterUsername: "SpotifyEng",
 
   stylesheets: [
     "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700&display=swap"
