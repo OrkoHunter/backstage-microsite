@@ -14,5 +14,5 @@ services:
       - ./website/pages:/app/website/pages
       - ./website/static:/app/website/static
       - ./website/sidebars.json:/app/website/sidebars.json
-      - ./website/siteConfig.js:/app/website/siteConfig.js
+      - ./website/docusaurus.config.js:/app/website/docusaurus.config.js
     working_dir: /app/website

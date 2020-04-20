@@ -5,12 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-// See https://docusaurus.io/docs/site-config for all the possible
-// site configuration options.
-
-// List of projects/orgs using your project for the users page.
-const users = [];
-
 const siteConfig = {
   title: "Backstage", // Title for your website.
   tagline: "An open platform for building developer portals",
@@ -45,15 +39,6 @@ const siteConfig = {
   // headerIcon: "img/android-chrome-192x192.png",
   footerIcon: "img/android-chrome-192x192.png",
   favicon: "img/favicon.ico",
-
-  /* Colors for website */
-  colors: {
-    primaryColor: "#36BAA2",
-    secondaryColor: "#191414",
-    textColor: "#FFFFFF",
-    navigatorTitleTextColor: "#9e9e9e",
-    navigatorItemTextColor: "#616161"
-  },
 
   /* Colors for syntax highlighting */
   highlight: {
