@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "backstage-microsite",
   "license": "Apache-2.0",
   "scripts": {
@@ -12,6 +12,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.4"
+    "@docusaurus/core": "^2.0.0-alpha.40",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.40"
   }
 }
