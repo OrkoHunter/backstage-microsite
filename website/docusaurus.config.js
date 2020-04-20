@@ -29,6 +29,14 @@ const siteConfig = {
         { to: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request live demo" },
       ],
     },
+    footer: {
+      logo: {
+        src: "img/android-chrome-192x192.png",
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Spotify AB`,
+    },
+    ogImage: "img/logo-black-248x250.png",
+    twitterImage: "img/logo-black-248x250.png",
     googleAnalytics: {
       trackingID: "UA-48912878-10",
     }
@@ -36,9 +44,6 @@ const siteConfig = {
 
   url: "https://backstage.io", // Your website URL
   baseUrl: "/", // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
 
   // Used for publishing and more
   projectName: "backstage",
@@ -51,34 +56,21 @@ const siteConfig = {
 
   /* path to images for header/footer */
   // headerIcon: "img/android-chrome-192x192.png",
-  footerIcon: "img/android-chrome-192x192.png",
   favicon: "img/favicon.ico",
 
+  /* highlight has been removed in Docusaurus v2 - "We now use Prism instead of highlight.js." */
   /* Colors for syntax highlighting */
-  highlight: {
-    theme: "dark"
-  },
+  // highlight: {
+  //   theme: "dark"
+  // },
 
-  // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Spotify AB`,
-
-  highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: "monokai"
-  },
+  // highlight: {
+  //   // Highlight.js theme to use for syntax highlighting in code blocks.
+  //   theme: "monokai"
+  // },
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ["https://buttons.github.io/buttons.js"],
-
-  // On page navigation for the current documentation page.
-  onPageNav: "separate",
-  // No .html extensions for paths.
-  cleanUrl: true,
-
-  // Open Graph and Twitter card images.
-  ogImage: "img/logo-black-248x250.png",
-  twitterImage: "img/logo-black-248x250.png",
-
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
