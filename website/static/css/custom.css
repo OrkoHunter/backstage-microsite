@@ -12,6 +12,7 @@
  * You can override the default Infima variables here.
  * https://facebookincubator.github.io/infima/
  */
+
 :root {
   --primaryColor: "#36BAA2";
   --secondaryColor: "#191414";
@@ -144,13 +145,13 @@ td {
   color: transparent;
   height: 40px;
   width: 180px;
-  background-image: url(../img/logo.svg);
+  background-image: url(/img/logo.svg);
   background-repeat: no-repeat;
   background-position: 0% 50%;
 }
 
 .footerLogo {
-  background-image: url(../img/logo.svg);
+  background-image: url(/img/logo.svg);
   background-repeat: no-repeat;
   height: 40px;
   width: 180px;
@@ -220,7 +221,7 @@ code {
 }
 
 /* .stripe {
-  background-image: url("../img/stripe.svg");
+  background-image: url("/img/stripe.svg");
   background-repeat: no-repeat;
   background-size: 100%;
 } */
@@ -294,7 +295,7 @@ code {
 
 .bg-dots {
   background-color: #121212;
-  background-image: url(../img/dot.svg);
+  background-image: url(/img/dot.svg);
   background-repeat: repeat;
   background-blend-mode: normal;
   background-position: center;
@@ -302,7 +303,7 @@ code {
 
 .decoration-logos-background {
   position: absolute;
-  background-image: url(../img/logos-background.svg);
+  background-image: url(/img/logos-background.svg);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -633,7 +634,7 @@ code {
       rgb(18, 18, 18),
       rgba(0, 0, 0, 0)
     ),
-    url(../img/dot.svg);
+    url(/img/dot.svg);
 }
 
 .opacity-override {
