@@ -1,5 +1,6 @@
-const React = require("react");
-const PropTypes = require('prop-types')
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const simpleComponent = (Component, baseClassName = '', mods = []) => {
     const SimpleComponent = props => {
         // Extra BEM modifiers, e.g. `Block__Container--reversed`
@@ -58,8 +59,4 @@ const Breakpoint = ({narrow, wide}) => (
     </React.Fragment>
 )
 
-module.exports = {
-    Block,
-    ActionBlock,
-    Breakpoint
-}
+export {Block, ActionBlock, Breakpoint};

@@ -5,11 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require("react");
-const Components = require(`${process.cwd()}/core/Components.js`);
-const Block = Components.Block;
-const ActionBlock = Components.ActionBlock;
-const Breakpoint = Components.Breakpoint;
+
+import React from 'react';
+import {Block, ActionBlock, Breakpoint} from '../core/Components';
 
 class Index extends React.Component {
   render() {
@@ -135,4 +133,4 @@ in one place, your engineers will always know where to find the right tool for t
   }
 }
 
-module.exports = Index;
+export default Index;
