@@ -6,12 +6,10 @@
  */
 
 const React = require('react');
-const Components = require(`${process.cwd()}/core/Components.js`);
-const Block = Components.Block;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import { Block } from '../core/Components';
 
-const Background = (props) => {
-  const { config: siteConfig } = props;
-  const { baseUrl } = siteConfig;
+const Background = () => {
   return (
     <div className="mainWrapper">
       <Block className="stripe-bottom bg-grey-black">
@@ -89,11 +87,11 @@ const Background = (props) => {
             A LOOK AT THE NUMBERS
           </Block.Paragraph>
           <Block.Container>
-            <img src={`${baseUrl}img/embraced.svg`}/>
+            <img src={useBaseUrl('img/embraced.svg')}/>
           </Block.Container>
         </Block.Container>
       </Block>
-      
+
 
       <Block className="stripe-top bg-grey-black">
         <Block.Container>
@@ -108,4 +106,4 @@ const Background = (props) => {
   );
 }
 
-module.exports = Background;
+export default Background;

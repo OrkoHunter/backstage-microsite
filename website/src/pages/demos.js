@@ -6,12 +6,9 @@
  */
 
 const React = require('react');
-const Components = require(`${process.cwd()}/core/Components.js`);
-const Block = Components.Block;
+import { Block } from '../core/Components';
 
-const Background = (props) => {
-  const { config: siteConfig } = props;
-  const { baseUrl } = siteConfig;
+const Demos = () => {
   return (
     <div className="mainWrapper">
 
@@ -60,4 +57,4 @@ const Background = (props) => {
   );
 }
 
-module.exports = Background;
+export default Demos;
