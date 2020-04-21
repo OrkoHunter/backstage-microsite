@@ -84,7 +84,13 @@ const siteConfig = {
 
   stylesheets: [
     "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700&display=swap"
-  ]
+  ],
+
+  customFields: {
+    fossWebsite: "https://spotify.github.io/",
+    repoUrl: "https://github.com/spotify/backstage",
+    twitterUsername: "SpotifyEng",
+  },
 };
 
 module.exports = siteConfig;

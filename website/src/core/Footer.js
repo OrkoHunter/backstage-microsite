@@ -5,115 +5,94 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require("react");
+import React from "react";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-class Footer extends React.Component {
-  docUrl(doc, language) {
-    const baseUrl = this.props.config.baseUrl;
-    const docsUrl = this.props.config.docsUrl;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
-    const langPart = `${language ? `${language}/` : ""}`;
-    return `${baseUrl}${docsPart}${langPart}${doc}`;
-  }
+const Footer = () => {
+  const {siteConfig = {}} = useDocusaurusContext();
+  const {baseUrl, organizationName} = siteConfig;
+  const {repoUrl, fossWebsite, twitterUsername} = siteConfig.customFields;
+  const {copyright} = siteConfig.themeConfig.footer;
 
-  pageUrl(doc, language) {
-    const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? `${language}/` : "") + doc;
-  }
+  return (
+    <footer className="nav-footer" id="footer">
+      <section className="sitemap">
+        <div className="footer-title">
+          <a href={baseUrl}>
+            <h2 className="footerLogo"></h2>
+          </a>
+        </div>
+        <div>
+          <h5>Docs</h5>
+          <a
+            href={`${repoUrl}/blob/master/docs/getting-started/create-a-plugin.md`}
+          >
+            Create a Plugin
+          </a>
+          <a
+            href={`${repoUrl}/blob/master/docs/getting-started/structure-of-a-plugin.md`}
+          >
+            Structure of a Plugin
+          </a>
+          <a
+            href={`${repoUrl}/blob/master/docs/reference/README.md`}
+          >
+            API references
+          </a>
+          <a
+            href={`${repoUrl}/blob/master/docs/FAQ.md`}
+          >
+            FAQ
+          </a>
+        </div>
+        <div>
+          <h5>Community</h5>
+          <a href="https://discord.gg/MUpMjP2">#general on Discord</a>
+          <a href="https://discord.gg/dKhwsBp">#support on Discord</a>
+          <a href='https://forms.gle/diN2zFYW7YbP17gE7'>Request a live demo</a>
+        </div>
+        <div>
+          <h5>More</h5>
+          <a href={fossWebsite}>
+            Open Source @ {organizationName}
+          </a>
+          <a href={repoUrl}>GitHub</a>
+          <a
+            className="github-button"
+            href={repoUrl}
+            data-icon="octicon-star"
+            data-count-href="/spotify/backstage/stargazers"
+            data-show-count="true"
+            data-count-aria-label="# stargazers on GitHub"
+            aria-label="Star this project on GitHub"
+          >
+            Star
+          </a>
+          {twitterUsername && (
+            <div className="social">
+              <a
+                href={`https://twitter.com/${twitterUsername}`}
+                className="twitter-follow-button"
+              >
+                Follow @{twitterUsername}
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
 
-  render() {
-    return (
-      <footer className="nav-footer" id="footer">
-        <section className="sitemap">
-          <div className="footer-title">
-            <a href={this.props.config.baseUrl}>
-              <h2 className="footerLogo"></h2>
-            </a>
-          </div>
-          <div>
-            <h5>Docs</h5>
-            <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/create-a-plugin.md`}
-            >
-              Create a Plugin
-            </a>
-            <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/structure-of-a-plugin.md`}
-            >
-              Structure of a Plugin
-            </a>
-            <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/reference/README.md`}
-            >
-              API references
-            </a>
-            <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/FAQ.md`}
-            >
-              FAQ
-            </a>
-          </div>
-          <div>
-            <h5>Community</h5>
-            <a href="https://discord.gg/MUpMjP2">#general on Discord</a>
-            <a href="https://discord.gg/dKhwsBp">#support on Discord</a>
-            <a href='https://forms.gle/diN2zFYW7YbP17gE7'>Request a live demo</a>
-            <a href='https://mailchi.mp/spotify/backstage-community'>Subscribe to newsletter</a>
-            {/*
-            <h5>Docs</h5>
-            <a href={this.docUrl("developing-a-plugin.html", this.props.language)}>
-              Developing a Plugin
-            </a>
-            <a href={this.docUrl("apis.html", this.props.language)}>
-              API Overview
-            </a>
-            <a href={this.docUrl("layout-components.html", this.props.language)}>
-              Layout Components
-            </a>
-            */}
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href={this.props.config.fossWebsite}>
-              Open Source @ {this.props.config.organizationName}
-            </a>
-            <a href={this.props.config.repoUrl}>GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/spotify/backstage/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub"
-            >
-              Star
-            </a>
-            {this.props.config.twitterUsername && (
-              <div className="social">
-                <a
-                  href={`https://twitter.com/${this.props.config.twitterUsername}`}
-                  className="twitter-follow-button"
-                >
-                  Follow @{this.props.config.twitterUsername}
-                </a>
-              </div>
-            )}
-          </div>
-        </section>
+      <a
+        href={fossWebsite}
+        target="_blank"
+        rel="noreferrer noopener"
+        className="spotifyOpenSource"
+      >
+        Made with <span>❤</span> at {organizationName}
+      </a>
+      <p className="copyright">{copyright}</p>
+    </footer>
+  );
 
-        <a
-          href={this.props.config.fossWebsite}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="spotifyOpenSource"
-        >
-          Made with <span>❤</span> at {this.props.config.organizationName}
-        </a>
-        <p className="copyright">{this.props.config.copyright}</p>
-      </footer>
-    );
-  }
 }
 
 module.exports = Footer;
