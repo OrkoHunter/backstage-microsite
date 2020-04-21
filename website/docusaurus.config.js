@@ -47,6 +47,7 @@ const siteConfig = {
       {
         docs: {
           path: 'docs',
+          sidebarPath: require.resolve('./sidebars.json'),
           editUrl: 'https://github.com/spotify/backstage-microsite',
         },
         pages: {
